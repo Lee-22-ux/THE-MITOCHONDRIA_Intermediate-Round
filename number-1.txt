@@ -1,0 +1,105 @@
+import java.io.*;
+import java.util.*;
+import java.util.Iterator;
+/**
+ *
+ * @author OQUIAS, JAYSON
+ */
+public class Competition {
+public static void main(String[] args)
+    {
+  
+      
+        List<String> list1 = new ArrayList<String>();
+        
+        list1.add("a,");
+        list1.add("b,");
+        list1.add("c");
+  
+       
+        List<String> list2 = new ArrayList<String>();
+  
+        list2.add("1,");
+        list2.add("2,");
+        list2.add("3");
+  
+      
+        System.out.print("[] ");
+  
+
+        Iterator iterator = list1.iterator();
+  
+        while (iterator.hasNext()) {
+  
+         
+            System.out.print(iterator.next() + " ");
+        }
+  
+
+        System.out.println();
+  
+ 
+        System.out.print("[] ");
+  
+  
+        iterator = list2.iterator();
+  
+   
+        while (iterator.hasNext()) {
+  
+    
+            System.out.print(iterator.next() + " ");
+        }
+  
+   
+        int i = 0;
+        int j = 0;
+  
+    
+        List<String> merged_list = new ArrayList<String>();
+  
+    
+        while (i < list1.size() && j < list2.size()) {
+  
+            merged_list.add(list1.get(i));
+  
+            merged_list.add(list2.get(j));
+  
+  
+            i++;
+            j++;
+        }
+  
+  
+        while (i < list1.size()) {
+            merged_list.add(list1.get(i));
+  
+       
+            i++;
+        }
+  
+ 
+        while (j < list2.size()) {
+            merged_list.add(list2.get(j));
+  
+         
+            j++;
+        }
+  
+  
+        System.out.println();
+  
+ 
+        System.out.print("Output: ");
+  
+ 
+        iterator = merged_list.iterator();
+  
+      
+        while (iterator.hasNext()) {
+  
+    
+            System.out.print(iterator.next() + " ");
+        }
+    }
+}
